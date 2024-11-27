@@ -1,13 +1,8 @@
-namespace ComicRentalSystem.Models
-{
-    public class ErrorViewModel
-    {
-        public string RequestId { get; set; } = string.Empty;
+namespace PULLPUST.Models;
 
-        public ErrorViewModel()
-        {
-            // Đảm bảo RequestId có giá trị mặc định khi đối tượng được khởi tạo
-            RequestId = string.Empty;
-        }
-    }
+public class ErrorViewModel
+{
+    public string? RequestId { get; set; }
+
+    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 }

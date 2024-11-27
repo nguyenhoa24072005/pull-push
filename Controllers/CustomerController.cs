@@ -1,49 +1,53 @@
-using ComicRentalSystem.Models;
+using ComicSystem.Data;
+using ComicSystem.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ComicRentalSystem.Controllers
+namespace ComicSystem.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CustomerController : ControllerBase
+    public class CustomersController : Controller
     {
-        private readonly ComicSystemContext _context;
+        private readonly ComicSystemDbContext _context;
 
-        public CustomerController(ComicSystemContext context)
+        public CustomersController(ComicSystemDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Customer
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
+        public async Task<IActionResult> Index()
         {
-            return await _context.Customers.ToListAsync();
+            var customers = await _context.Customers.ToListAsync();
+            return View(customers);
         }
 
-        // GET: api/Customer/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Customer>> GetCustomer(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var customer = await _context.Customers.FindAsync(id);
-
+            var customer = await _context.Customers
+                .FirstOrDefaultAsync(m => m.CustomerID == id);
             if (customer == null)
             {
                 return NotFound();
             }
-
-            return customer;
+            return View(customer);
         }
 
-        // POST: api/Customer
-        [HttpPost]
-        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
+        public IActionResult Register()
         {
-            _context.Customers.Add(customer);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetCustomer), new { id = customer.CustomerID }, customer);
+            return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Customers.Add(customer);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));  // Redirect back to the customer list after successful registration
+            }
+            return View(customer);  // Return the form if validation fails
+        }
+
     }
+
 }
