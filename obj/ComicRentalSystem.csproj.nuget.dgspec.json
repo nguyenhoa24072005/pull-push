@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\huy\\ComicRentalSystem\\ComicRentalSystem.csproj": {}
+    "C:\\Users\\huy\\ComicRentalSystem\\PULLPUST\\pull-push\\ComicRentalSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\huy\\ComicRentalSystem\\ComicRentalSystem.csproj": {
+    "C:\\Users\\huy\\ComicRentalSystem\\PULLPUST\\pull-push\\ComicRentalSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\huy\\ComicRentalSystem\\ComicRentalSystem.csproj",
+        "projectUniqueName": "C:\\Users\\huy\\ComicRentalSystem\\PULLPUST\\pull-push\\ComicRentalSystem.csproj",
         "projectName": "ComicRentalSystem",
-        "projectPath": "C:\\Users\\huy\\ComicRentalSystem\\ComicRentalSystem.csproj",
+        "projectPath": "C:\\Users\\huy\\ComicRentalSystem\\PULLPUST\\pull-push\\ComicRentalSystem.csproj",
         "packagesPath": "C:\\Users\\huy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\huy\\ComicRentalSystem\\obj\\",
+        "outputPath": "C:\\Users\\huy\\ComicRentalSystem\\PULLPUST\\pull-push\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\huy\\AppData\\Roaming\\NuGet\\NuGet.Config"

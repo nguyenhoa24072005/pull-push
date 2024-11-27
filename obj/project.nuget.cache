@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LtvJOkzNW/A=",
+  "dgSpecHash": "f0J5OmtWLUw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\huy\\ComicRentalSystem\\ComicRentalSystem.csproj",
+  "projectFilePath": "C:\\Users\\huy\\ComicRentalSystem\\PULLPUST\\pull-push\\ComicRentalSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\huy\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\huy\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
